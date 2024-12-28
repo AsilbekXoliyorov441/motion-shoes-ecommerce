@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='bg-gray-800 text-center py-4'>
-        <p>&copy; {new Date().getFullYear()} Nike Shoes. All rights reserved</p>
+        <p>&copy; {new Date().getFullYear()} Nike Shoes. All rights reserved. Made by Asilbek Xoliyorov</p>
       </div>
     </footer>
   );
