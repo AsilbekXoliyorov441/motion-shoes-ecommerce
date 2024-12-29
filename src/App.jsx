@@ -1,6 +1,4 @@
 import React from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './pages/Home'
 import Contact from './pages/Contact'

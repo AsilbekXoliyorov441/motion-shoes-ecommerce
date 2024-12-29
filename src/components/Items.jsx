@@ -17,7 +17,7 @@ const Items = ({product}) => {
                     </Link>
                 </h3>
             </div>
-            <p className='text-sm font-medium text-gray-900'>{product?.new_price}</p>
+            <p className='text-sm font-medium text-gray-900'>${product?.new_price}</p>
         </div>
     </div>
   )
