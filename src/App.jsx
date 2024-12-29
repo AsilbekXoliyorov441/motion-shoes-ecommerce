@@ -7,24 +7,73 @@ import Contact from './pages/Contact'
 import Cart from './pages/Cart'
 import Footer from './components/Footer'
 import { UpdateFollower } from 'react-mouse-follower'
+import ProductList from './components/ProductList'
+import Navbar2 from './components/Navbar2'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
       <>
-        <Home/>
-        <Footer/>
+        <Home />
+        <Footer />
       </>
     ),
   },
   {
+    path: "/mens",
+    element: (
+      <>
+        <Navbar2 />
+        <ProductList category="men" />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/womens",
+    element: (
+      <>
+        <Navbar2 />
+        <ProductList category="women" />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/kids",
+    element: (
+      <>
+        <Navbar2 />
+        <ProductList category="kid" />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "products/productId",
+    element: <><Navbar2/>SingleProduct<Footer/></>
+  }
+  ,
+  {
     path: "/contact",
-    element: <Contact />,
+    element: (
+      <>
+        <Navbar2 />
+        <Contact />
+        <Footer />
+      </>
+    ),
   },
   {
     path: "/cart",
-    element: <Cart />,
+    element: (
+      <>
+        <Navbar2 />
+        <Cart />
+        <Footer />
+      </>
+    ),
   },
 ]);
 
