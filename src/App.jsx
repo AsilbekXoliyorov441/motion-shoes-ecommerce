@@ -5,9 +5,9 @@ import { UpdateFollower } from "react-mouse-follower";
 import ProductList from "./components/ProductList";
 import Navbar2 from "./components/Navbar2";
 import SingleProduct from "./components/SingleProduct";
-import Home from './Pages/Home';
 import Contact from './pages/Contact';
 import Cart from './pages/Cart';
+import Home from './pages/Home';
 
 const router = createBrowserRouter([
   {
