@@ -1,8 +1,11 @@
-import {  Star } from "lucide-react";
-import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from "react";
+import { ShopContext } from "../context/ShopContext";
+import { Star } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const ProductDisplay = ({ product }) => {
+const ProductDisplay = (props) => {
+  const { product } = props;
+  const { addToCart } = useContext(ShopContext);
   const [mainImage, setMainImage] = useState(product.image);
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 my-20 md:gap-10 px-6 md:px-0">
@@ -33,12 +36,11 @@ const ProductDisplay = ({ product }) => {
             className="md:h-[163px] h-[75px] md:w-[100px] w-[120px]"
           />
         </div>
-
         <div>
           <img
             src={mainImage}
-            alt="alt"
-            className="md:h-[548px] md:w-[480px] w-[600px]"
+            alt=""
+            className="md:h-[580px] md:w-[480px] w-[600px]"
           />
         </div>
       </div>
@@ -59,9 +61,9 @@ const ProductDisplay = ({ product }) => {
           <div className="text-[#138695] text-3xl">${product.new_price}</div>
         </div>
         <div>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
-          suscipit commodi dicta cumque adipisci repellendus quaerat distinctio
-          laudantium ipsam dignissimos!
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          dolore voluptatem nesciunt facere totam suscipit illum laboriosam
+          nulla, corporis amet consequuntur, fugiat modi voluptate libero?
         </div>
         <div>
           <h1 className="font-semibold text-gray-400 text-2xl mt-4">
@@ -80,17 +82,16 @@ const ProductDisplay = ({ product }) => {
             onClick={() => {
               addToCart(product.id);
             }}
-            className="bg-[#138695] text-white px-6 py-3 my-4"
-            w-max
+            className="bg-[#138695] text-white px-6 py-3 my-4 w-max"
           >
             ADD TO CART
           </button>
         </Link>
-        <p className="font-semibold">
-          Category :<span> Sports, Gym , Running</span>
+        <p>
+          <span className="font-semibold">Category :</span> Sports, Gym, Running
         </p>
-        <p className="font-semibold">
-          Tags : <span>Modern , Latest</span>
+        <p>
+          <span className="font-semibold">Tags :</span> Modern, Latest
         </p>
       </div>
     </div>

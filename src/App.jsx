@@ -1,13 +1,15 @@
-import React from 'react'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import Home from './pages/Home'
-import Contact from './pages/Contact'
-import Cart from './pages/Cart'
-import Footer from './components/Footer'
-import { UpdateFollower } from 'react-mouse-follower'
-import ProductList from './components/ProductList'
-import Navbar2 from './components/Navbar2'
-import SingleProduct from './components/SingleProduct'
+import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./Pages/Home";
+import Contact from "./Pages/Contact";
+import Cart from "./Pages/Cart";
+import Footer from "./components/Footer";
+import { UpdateFollower } from "react-mouse-follower";
+import ProductList from "./components/ProductList";
+import Navbar2 from "./components/Navbar2";
+import SingleProduct from "./components/SingleProduct";
 
 const router = createBrowserRouter([
   {
@@ -50,21 +52,21 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "products/:productId",
-    element: (
-      <>
-        <Navbar2 />
-        <SingleProduct />
-        <Footer />
-      </>
-    ),
-  },
-  {
     path: "/contact",
     element: (
       <>
         <Navbar2 />
         <Contact />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/products/:productId",
+    element: (
+      <>
+        <Navbar2 />
+        <SingleProduct />
         <Footer />
       </>
     ),
@@ -95,6 +97,6 @@ const App = () => {
       </UpdateFollower>
     </main>
   );
-}
+};
 
-export default App
+export default App;

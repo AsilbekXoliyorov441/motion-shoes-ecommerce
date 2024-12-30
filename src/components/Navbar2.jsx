@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import Logo from "../assets/logo2.png";
 import { Link } from "react-router-dom";
@@ -8,8 +8,7 @@ import { HiMenuAlt1, HiMenuAlt3 } from "react-icons/hi";
 import ResponsiveMenu from "./ResponsiveMenu";
 import { UpdateFollower } from "react-mouse-follower";
 import { NavbarMenu } from "./Navbar";
-
-
+import { ShopContext } from "../context/ShopContext";
 
 const Navbar2 = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -17,6 +16,8 @@ const Navbar2 = () => {
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
+
+  const { getTotalCartItems } = useContext(ShopContext);
 
   return (
     <div className="text-black py-2 bg-gray-200  z-10">
@@ -56,10 +57,13 @@ const Navbar2 = () => {
                 mixBlendMode: "difference",
               }}
             >
-              <Link>
-                <button className="text-xl ps-14">
+              <Link to="/cart">
+                <div className="relative">
                   <ShoppingCart />
-                </button>
+                  <div className="bg-[#138695] w-5 absolute -top-3 -right-2 flex items-center justify-center rounded-full text-white">
+                    {getTotalCartItems()}
+                  </div>
+                </div>
               </Link>
             </UpdateFollower>
             <UpdateFollower
@@ -79,7 +83,12 @@ const Navbar2 = () => {
         </div>
         <div className="flex gap-8 md:hidden z-50">
           <Link to={"/cart"}>
-            <ShoppingCart />
+            <div className="relative w-10 z-50">
+              <ShoppingCart />
+              <div className="bg-[#138695] z-40 w-5 absolute -top-2 right-1 flex items-center justify-center rounded-full text-white">
+                {getTotalCartItems()}
+              </div>
+            </div>
           </Link>
           {showMenu ? (
             <HiMenuAlt1
