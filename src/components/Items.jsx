@@ -13,7 +13,7 @@ const Items = ({product}) => {
             <div>
                 <h3 className='text-sm text-gray-700'>
                     <Link to={`products/${product?.id}`}>
-                        <span className=" inset-0 aria-hidden:true">{product.name}</span>
+                        <span className=" inset-0 aria-hidden:true">{product?.name}</span>
                     </Link>
                 </h3>
             </div>

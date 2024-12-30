@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import { UpdateFollower } from 'react-mouse-follower'
 import ProductList from './components/ProductList'
 import Navbar2 from './components/Navbar2'
+import SingleProduct from './components/SingleProduct'
 
 const router = createBrowserRouter([
   {
@@ -49,10 +50,15 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "products/productId",
-    element: <><Navbar2/>SingleProduct<Footer/></>
-  }
-  ,
+    path: "products/:productId",
+    element: (
+      <>
+        <Navbar2 />
+        <SingleProduct />
+        <Footer />
+      </>
+    ),
+  },
   {
     path: "/contact",
     element: (
