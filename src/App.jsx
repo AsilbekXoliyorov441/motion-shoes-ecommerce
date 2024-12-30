@@ -1,8 +1,5 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
 import Cart from "./Pages/Cart";
 import Footer from "./components/Footer";
@@ -10,6 +7,7 @@ import { UpdateFollower } from "react-mouse-follower";
 import ProductList from "./components/ProductList";
 import Navbar2 from "./components/Navbar2";
 import SingleProduct from "./components/SingleProduct";
+import Home from './Pages/Home';
 
 const router = createBrowserRouter([
   {
