@@ -16,13 +16,13 @@ export const NavbarMenu = [
   },
   {
     id: 2,
-    title: "Mens",
-    link: "/mens",
+    title: "Men",
+    link: "/men",
   },
   {
     id: 3,
-    title: "Womens",
-    link: "/womens",
+    title: "Women",
+    link: "/women",
   },
   {
     id: 4,

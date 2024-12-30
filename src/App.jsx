@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/mens",
+    path: "/men",
     element: (
       <>
         <Navbar2 />
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/womens",
+    path: "/women",
     element: (
       <>
         <Navbar2 />
